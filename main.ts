@@ -26,7 +26,6 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 function print (x: number) {
-    list += 1
     if (x < 10) {
         basic.showNumber(a)
     } else if (x == 10) {
@@ -109,13 +108,15 @@ function print (x: number) {
             # . . . #
             # . # # #
             `)
+    } else if (false) {
+    	
     } else {
         basic.showLeds(`
-            # . # . .
-            . # . . .
+            # # # # #
+            . # # . #
+            . # # . #
             # . # . #
-            . . . # .
-            . . # . #
+            # # # # #
             `)
     }
 }
@@ -153,6 +154,5 @@ input.onGesture(Gesture.Shake, function () {
     print(a)
 })
 let a = 0
-let list = 0
 let d = 0
 d = 2
