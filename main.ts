@@ -1,10 +1,10 @@
 input.onButtonPressed(Button.A, function () {
     if (d == 20) {
         d = 12
-        basic.showNumber(d)
+        print(d)
     } else if (d == 12) {
         d = 10
-        basic.showNumber(d)
+        print(d)
     } else if (d == 10) {
         d = 8
         basic.showNumber(d)
@@ -22,9 +22,102 @@ input.onButtonPressed(Button.A, function () {
         basic.showNumber(d)
     } else {
         d = 20
-        basic.showNumber(d)
+        print(d)
     }
 })
+function print (x: number) {
+    if (x < 10) {
+        basic.showNumber(a)
+    } else if (x == 10) {
+        basic.showLeds(`
+            # . # # #
+            # . # . #
+            # . # . #
+            # . # . #
+            # . # # #
+            `)
+    } else if (x == 11) {
+        basic.showLeds(`
+            . # . # .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # . # .
+            `)
+    } else if (x == 12) {
+        basic.showLeds(`
+            # . # # #
+            # . . . #
+            # . # # #
+            # . # . .
+            # . # # #
+            `)
+    } else if (x == 13) {
+        basic.showLeds(`
+            # . # # #
+            # . . . #
+            # . . # #
+            # . . . #
+            # . # # #
+            `)
+    } else if (x == 14) {
+        basic.showLeds(`
+            # . # . #
+            # . # . #
+            # . # # #
+            # . . . #
+            # . . . #
+            `)
+    } else if (x == 15) {
+        basic.showLeds(`
+            # . # # #
+            # . # . .
+            # . # # #
+            # . . . #
+            # . # # #
+            `)
+    } else if (x == 16) {
+        basic.showLeds(`
+            # . # # #
+            # . # . .
+            # . # # #
+            # . # . #
+            # . # # #
+            `)
+    } else if (x == 17) {
+        basic.showLeds(`
+            # . # # #
+            # . . . #
+            # . . # .
+            # . . # .
+            # . . # .
+            `)
+    } else if (x == 18) {
+        basic.showLeds(`
+            # . # # #
+            # . # . #
+            # . # # #
+            # . # . #
+            # . # # #
+            `)
+    } else if (x == 19) {
+        basic.showLeds(`
+            # . # # #
+            # . # . #
+            # . # # #
+            # . . . #
+            # . # # #
+            `)
+    } else {
+        basic.showLeds(`
+            # . # . .
+            . # . . .
+            # . # . #
+            . . . # .
+            . . # . #
+            `)
+    }
+}
 input.onButtonPressed(Button.B, function () {
     if (d == 2) {
         d = 3
@@ -40,23 +133,23 @@ input.onButtonPressed(Button.B, function () {
         basic.showNumber(d)
     } else if (d == 8) {
         d = 10
-        basic.showNumber(d)
+        print(d)
     } else if (d == 10) {
         d = 12
-        basic.showNumber(d)
+        print(d)
     } else if (d == 12) {
         d = 20
-        basic.showNumber(d)
+        print(d)
     } else {
         d = 2
-        basic.showNumber(d)
+        print(d)
     }
 })
 input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
     basic.pause(100)
     a = randint(1, d)
-    basic.showNumber(a)
+    print(a)
 })
 let a = 0
 let d = 0
